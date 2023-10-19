@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/src/input.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <title>Todolist</title>
+</head>
+  <body>
+    <header class="h-[55px] w-full bg-blue-950 px-12 flex items-center justify-end gap-6 shadow-lg">
+      <div class="flex items-center gap-5">
+        <img id="img_user" class="h-8 w-8 rounded-full" src="" />
+        <div class="text-yellow-500 text-lg font-bold" id="username">Username</div>
+      </div>
+      <button class="bg-rose-600 text-white rounded-md p-2 hover:bg-rose-500 transition duration-300 ease-in-out" onclick="onLogout()"><i class="fa-solid fa-power-off"></i>
+      </button>
+    </header>
+
+    <div class="flex items-center justify-center flex-col mx-[400px] min-w-[640px] shadow-lg rounded-xl border mt-44 p-5">
+      <header class="flex w-full justify-center items-center flex-col mb-5">
+          <h1 class="text-3xl font-bold mb-[10px]">Daftar Kegiatan</h1>
+          <div class="w-full transition-all duration-300 ease-in-out scale-90"></div>
+          <div class="w-full flex flex-row justify-between items-center h-full">
+              <input type="text" placeholder="Tambah Kegiatan . . ." class="w-full max-w-full border-2 rounded-md px-3 py-2" id="taskName" />              
+              <button class="rounded-md px-3 py-2 bg-yellow-500 ml-4 hover:shadow-lg transition duration-300 ease-in-out group" id="btnSubmit">
+                <i class="fa-solid fa-plus group-hover:text-white transition duration-200 ease-in-out"></i>
+              </button>
+          </div>
+      </header>  
+       <table class="table w-full">
+          <thead>
+              <tr class="flex flex-row justify-between items-center p-[10px] w-full border-b-[1px]">
+                  <th>Task</th>
+                  <th>Date</th>
+                  <th>Status</th>
+                  <th>Actions</th>
+              </tr>
+          </thead>
+          <tbody class="listTask flex flex-col justify-between place-items-center min-h-full max-h-[54vh] overflow-y-auto w-full">
+          </tbody>
+      </table>
+  </div>
+  </body>
+  <script src="./js/home.js"></script>
+</html>
