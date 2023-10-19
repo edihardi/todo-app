@@ -1,5 +1,27 @@
 const listTask = document.querySelector('.listTask');
 
+function getDataUser() {
+    //1.get data localstorage
+    //2.Convert data ke object
+    //3. display ke dom
+
+    const dataUser = localStorage.getItem('user')
+
+    if (dataUser) {
+        const conData = JSON.parse(dataUser)
+
+        const imgElm = document.getElementById('img_user')
+        imgElm.src = conData.imgUrl
+
+        const usernameElm = document.getElementById('username')
+        usernameElm.innerHTML = conData.username
+    } else {
+        window.location.href = 'login.html'
+
+    }
+
+}
+
 // get taskData from local storage
 let taskData = JSON.parse(localStorage.getItem("taskData")) || []
 
@@ -142,29 +164,6 @@ const displayTaskData = (taskDataArray) => {
             </tr>
     `;
   })
-}
-
-
-function getDataUser() {
-    //1.get data localstorage
-    //2.Convert data ke object
-    //3. display ke dom
-
-    const dataUser = localStorage.getItem('user')
-
-    if (dataUser) {
-        const conData = JSON.parse(dataUser)
-
-        const imgElm = document.getElementById('img_user')
-        imgElm.src = conData.imgUrl
-
-        const usernameElm = document.getElementById('username')
-        usernameElm.innerHTML = conData.username
-    } else {
-        window.location.href = 'login.html'
-
-    }
-
 }
 
 function onLogout() {
