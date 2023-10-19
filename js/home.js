@@ -16,7 +16,7 @@ function getDataUser() {
         const usernameElm = document.getElementById('username')
         usernameElm.innerHTML = conData.username
     } else {
-        window.location.href = 'login.html'
+        window.location.href = 'index.html'
 
     }
 
@@ -168,7 +168,7 @@ const displayTaskData = (taskDataArray) => {
 
 function onLogout() {
     localStorage.removeItem('user')
-    window.location.href = 'login.html'
+    window.location.href = 'index.html'
 }
 
 function convDate(date) {
